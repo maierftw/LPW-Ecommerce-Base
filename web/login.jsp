@@ -14,6 +14,7 @@
 
    </head>
    <body>
+      <div class="container">
       <h1>Entrar no Sistema</h1>
       <form action="Login" method="post">
          <div class="form-group">
@@ -26,7 +27,7 @@
          </div>
          <button type="submit" class="btn btn-default">Submit</button>
       </form>
-
+      </div>
       <script src="js/bootstrap.min.js" type="text/javascript"></script>
    </body>
 </html>

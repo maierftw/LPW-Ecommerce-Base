@@ -35,28 +35,26 @@
           </div>
 
         </nav>
-
-        <h1>Hello World!</h1>
-
-        <form action="AddProduto" method="post">
-            Descrição: <input name="descricao">
-            Preço: <input name="preco">
-
-            <button type="submit">OK</button>
-        </form>
+        <div class="container">
+        <h1>Ofertas</h1>
 
         <%
             for(int i=0; i<Produto.getLista().size(); i++){
-
-                Produto p = Produto.getLista().get(i);
+               Produto p = Produto.getLista().get(i);
+               if (i%4==0){ %>
+                   <div class="row">
+                <%}
 
                 out.println("<pre> "+ p.getDescricao() +" </pre>");
 
+                if (i%4==0){ %>
+                   </div>
+                <%}
             }
 
         %>
 
-
+        </div>
         <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
