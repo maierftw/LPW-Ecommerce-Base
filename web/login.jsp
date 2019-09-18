@@ -12,6 +12,7 @@
       <title>Minha loja</title>
       <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
+
    </head>
    <body>
       <div class="container">
