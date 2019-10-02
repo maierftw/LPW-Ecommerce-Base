@@ -7,6 +7,7 @@ package db;
 
 import java.util.ArrayList;
 import modelos.Produto;
+import modelos.Usuario;
 
 /**
  *
@@ -16,10 +17,43 @@ public class Mock {
 
    private static ArrayList<Produto> lista;
 
+   public static void makeMock(){
+      createUsers();
+      createProducts();
+   }
 
-   public static void makeMock() {
+   private static void createUsers(){
+      ArrayList<Usuario> lista;
 
-      if(lista == null){
+      if(Usuario.getLista().isEmpty()){
+         lista = Usuario.getLista();
+
+         Usuario admin = new Usuario();
+         admin.setEmail("admin@ifpr.edu.br");
+         admin.setSenha("admin");
+         admin.setNome("Administrador");
+         lista.add(admin);
+
+         Usuario gerente = new Usuario();
+         gerente.setEmail("gerente@ifpr.edu.br");
+         gerente.setSenha("123456");
+         gerente.setNome("Gerente");
+         lista.add(gerente);
+
+         Usuario joao = new Usuario();
+         joao.setEmail("joao@ifpr.edu.br");
+         joao.setSenha("1234");
+         joao.setNome("João");
+         lista.add(joao);
+
+      }
+   }
+
+   private static void createProducts() {
+      ArrayList<Produto> lista;
+
+
+      if(Produto.getLista().isEmpty()){
          lista = Produto.getLista();
 
          Produto caneta = new Produto();
