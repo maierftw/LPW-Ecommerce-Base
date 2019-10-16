@@ -53,8 +53,8 @@ public class Mock {
       ArrayList<Produto> lista;
 
 
-      if(Produto.getLista().isEmpty()){
-         lista = Produto.getLista();
+      if(Produto.lista.isEmpty()){
+         lista = Produto.lista;
 
          Produto caneta = new Produto();
          caneta.setDescricao("Caneta BIC");
@@ -80,6 +80,7 @@ public class Mock {
          cd.setDescricao("CD Seu Jorge");
          cd.setPreco(5f);
          cd.setOferta(true);
+         cd.setImagem("https://upload.wikimedia.org/wikipedia/pt/6/6d/Capa_de_M%C3%BAsicas_para_Churrasco%2C_Vol._1.jpg");
          lista.add(cd);
 
       }
